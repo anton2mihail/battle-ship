@@ -1,8 +1,8 @@
 class Board {
   constructor() {
-    this.height = 10;
-    this.width = 10;
-    this.columns = [
+    this._height = 10;
+    this._width = 10;
+    this._columns = [
       'A',
       'B',
       'C',
@@ -14,7 +14,7 @@ class Board {
       'I',
       'J'
     ];
-    this.rows = [
+    this._rows = [
       0,
       1,
       2,
@@ -27,13 +27,14 @@ class Board {
       9
     ];
   }
+
   setBoard() {
     let board = [];
     this
-      .rows
+      ._rows
       .forEach((el) => {
         this
-          .rows
+          ._rows
           .forEach((iEl) => {
             board.push([el, iEl]);
           })
@@ -43,7 +44,8 @@ class Board {
 
 }
 
-// const tester = () => {  let board = new Board();
-// console.log(board.setBoard()); };
-//
-//tester();
+const tester = () => {
+  let board = new Board();
+  console.log(board.setBoard());
+};
+tester();
